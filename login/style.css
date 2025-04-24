@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #8db3cc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    border: 2px;
+  }
+  
+  header nav {
+    background-color: #a3d9a5;
+    padding: 10px;
+    text-align: right;
+  }
+  
+  .catalogo {
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .logo {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .logo img {
+    width: 100px;
+  }
+  
+  .logo h1 {
+    margin: 5px 0;
+    color: #444;
+  }
+  
+  .login-box {
+    background-color: #f5564e;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .login-box h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .tree-img {
+    width: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .login-box label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .login-box input {
+    width: 80%;
+    padding: 8px;
+    margin-top: 5px;
+    background-color: #fff176;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  
+  .login-btn, .register-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #a3d9a5;
+    cursor: pointer;
+  }
+  
+  .no-account {
+    margin: 15px 0 5px;
+    font-weight: normal;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 15px;
+    background-color: transparent;
+    font-weight: bold;
+  }
