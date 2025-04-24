@@ -10,7 +10,7 @@ body {
   
   header nav {
     background-color: #a3d9a5;
-    padding: 10px;
+    padding: 0px;
     text-align: right;
   }
   
@@ -28,6 +28,7 @@ body {
   .logo img {
     width: 450px;
     margin-top: 20px;
+    
   }
   
   .logo h1 {
@@ -40,7 +41,7 @@ body {
     border-radius: 15px;
     padding: 20px;
     width: 350px;
-    margin: 10px auto;
+    margin: 20px auto;
     text-align: center;
   }
   
@@ -52,7 +53,7 @@ body {
   
   .tree-img {
     width: 300px;
-    text-align: center;
+   
   }
   
   .login-box label {
