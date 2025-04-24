@@ -23,10 +23,19 @@ cadform.addEventListener('submit', function (event){
         )
         localStorage.setItem('usuarios', JSON.stringify(usuarios))
         alert("Cadastro realizado com sucesso!")
-        window.location.href = "projetobib\login\index.html"
+        //após o registro for concluido, ele te leva pra página de login
+        window.location.href = "../login/index.html"
       }
       console.log(usuarios)
 })
 
+//botão que redireciona de volta para a página de login
+
+function exitPage(){
+  const butlogin = document.getElementById('login')
+  if (butlogin){
+    window.location.href = "../login/index.html"
+  }
+}
 
 
