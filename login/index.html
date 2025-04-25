@@ -2,33 +2,45 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - GiraLivros</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="navbar">
-    <div class="ladoesquerdo"></div>
-    <div class="ladocentro"></div>
-    <div class="ladodireito">
-      <a class="link" href="#">Catálogo</a>
-    </div>
-  </div>
-  <img id="logo" src="img/logoinicial.png" alt="Logo">
-  <h2>GiraLivros</h2>
+  <header>
+    <nav>
+     <a id ="catalogo" href="../catalogocompleto/index.html"></a>
+    </nav>
+  </header>
 
-  <form id="loginForm">
-    <img id="arvorecenter" src="img/imagemmenu.png" alt="arvore livros">
-    <label for="text">Email</label><br>
-    <input type="text" id="username" placeholder="Email" required><br>
-    <label for="text">Senha</label><br>
-    <input type="password" id="password" placeholder="Senha" required><br>
-    <button type="submit">LOGIN</button>
-    
-  </form>
-  <label for="text">Não possui conta?</label><br>
-  <button id="cadastrar">Cadastrar</button>
+  <main>
+    <div id="logo">
+      <img src="img/logoinicial.png" alt="Logo GiraLivros">
+      
+    </div>
+
+    <form id="login-box">
+      <h2>Login</h2>
+      <img src="img/imagemmenu.png" alt="Árvore de livros" class="tree-img">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="">
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" placeholder="">
+
+      <button type="submit" id="login-btn">LOGIN</button>
+
+      <p id="no-account">Não possui conta?</p>
+      <button id="register-btn" onclick="pagCad()">CADASTRAR</button>
+    </form>
+  </main>
+
   <footer>
-    Av. Dorival Cândido Luz de Oliveira, 480 - Centro, Gravataí - RS, 94030-000
+    <p>
+      Av. Dorival Cândido Luz de Oliveira, 480 - Centro, Gravataí - RS, 94030-000
+    </p>
   </footer>
-  <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 </html>
