@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="navbar">
+    <div class="ladoesquerdo"></div>
+    <div class="ladocentro"></div>
+    <div class="ladodireito">
+      <a class="link" href="#">Catálogo</a>
+    </div>
+  </div>
+  <img id="logocadastro" src="img/logoinicial.png" alt="Logo">
+
+  <!-- formulario para o cadatro -->
+  <form id="cadastroform">
+    <h1><p> Cadastro</p> </h1><br>
+    <img id="arvorecenter" src="img/imagemmenu.png" alt="arvore livros"> <br>
+    <label for="text">Email</label><br>
+    <input type="text" id="username" placeholder="Email" required><br>
+    <label for="text">Matrícula</label><br>
+    <input type="number" id="matricula"  placeholder="Matrícula"><br>
+    <label for="text">Senha</label><br>
+    <input type="password" id="password" placeholder="Senha" required><br>
+    <button type="submit">Cadastrar</button>
+
+    <p id="possuiConta">Já possui conta?</p>
+  <button id="login" type="button" onclick="exitPage()">LOGIN</button>
+    
+  </form>
+  
+
+  <!-- rodapé para endereço local da livraria -->
+  <footer>
+    <p>Av. Dorival Cândido Luz de Oliveira, 480 - Centro, Gravataí - RS, 94030-000 </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

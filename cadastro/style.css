@@ -1,0 +1,124 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #8db3cc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#navbar {
+    width: 100%;
+    background-color: #a3d9a5;
+    padding: 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#navbar .link {
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+
+#logocadastro {
+    width: 480px;
+    margin-top: 20px;
+    transform: translateY(-130px)
+    
+}
+
+h2 {
+    margin: 5px 0 20px 0;
+    font-size: 24px;
+    color: #444;
+}
+
+
+#cadastroform {
+    background-color: #f5564e;
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    margin: 20px auto;
+    text-align: center;
+    transform: translateY(-250px)
+}
+
+#cadastroform h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#arvorecenter {
+    width: 150px;
+    margin: auto;
+}
+
+#cadastroform label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+#cadastroform input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #fff176;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+
+#cadastroform button[type="submit"] {
+    margin-top: 20px;
+    width: 90%;
+    padding: 10px;
+    background-color: #a3d9a5;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#cadastroform + label {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+#login {
+    width: 90%;
+    padding: 10px;
+    background-color: #a3d9a5;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+footer {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+    padding: 15px;
+    font-weight: bold;
+    color: black;
+    transform: translateY(-290px)
+}
