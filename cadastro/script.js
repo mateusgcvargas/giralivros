@@ -23,6 +23,7 @@ cadform.addEventListener('submit', function (event){
         )
         localStorage.setItem('usuarios', JSON.stringify(usuarios))
         alert("Cadastro realizado com sucesso!")
+        
         window.location.href = "../login/index.html"
       }
       console.log(usuarios)

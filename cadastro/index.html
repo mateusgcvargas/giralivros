@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>cadastro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -18,7 +19,7 @@
 
   <!-- formulario para o cadatro -->
   <form id="cadastroform">
-    <h1> Cadastro </h1><br>
+    <h1><p> Cadastro</p> </h1><br>
     <img id="arvorecenter" src="img/imagemmenu.png" alt="arvore livros"> <br>
     <label for="text">Email</label><br>
     <input type="text" id="username" placeholder="Email" required><br>
@@ -30,11 +31,11 @@
     
   </form>
   <label for="text">Já possui conta?</label><br>
-  <button id="login">Login</button>
+  <button id="login" onclick="exitPage()">Login</button>
 
   <!-- rodapé para endereço local da livraria -->
   <footer>
-    Av. Dorival Cândido Luz de Oliveira, 480 - Centro, Gravataí - RS, 94030-000
+    <p>Av. Dorival Cândido Luz de Oliveira, 480 - Centro, Gravataí - RS, 94030-000 </p>
   </footer>
   <script src="script.js"></script>
 </body>
