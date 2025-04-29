@@ -1,3 +1,4 @@
+
 //se não houver nenhum outro livro salvo no localstorage, ele adiciona um array com todos os livros disponíveis por padrão
 if (!localStorage.getItem('livros')) {
     //todos os livros atualmente disponíveis por padrão
@@ -81,6 +82,7 @@ function pesquisarLivro(){
     );
     
     // renderiza os livros que contém o filtro relevante
+    //cria uma tabela para cada livro disponível que for pego pelo filtro de pesquisa
     livrosFiltrados.forEach((livro) => {
         const linha = document.createElement('tr')
 
@@ -98,10 +100,55 @@ function pesquisarLivro(){
     
 }
 
+//menu dropdown da página HTML
+function menuDropdown(){
+    const generos = document.getElementById('generos')
+    generos.innerHTML = '<option selected disabled>Gêneros</option>'
+
+     // gera um array de gêneros únicos
+     const generosUnicos = [...new Set(livros.map(livro => livro.genero))]
+
+     generosUnicos.forEach(genero => {
+        const option = document.createElement('option');
+        option.value = genero;
+        option.textContent = genero;
+        generos.appendChild(option);
+    });
+
+}
+
+//função que renderiza somente o gênero selecionado pelo botão dropdown na tabela
+function filtrarPorGenero() {
+    const generoSelecionado = document.getElementById('generos').value.toLowerCase();
+    const listaLivros = document.getElementById('listaLivros');
+    listaLivros.innerHTML = '';
+
+    const livrosFiltrados = livros.filter(livro => livro.genero.toLowerCase() === generoSelecionado);
+
+    livrosFiltrados.forEach((livro) => {
+        const linha = document.createElement('tr');
+        //cria uma tabela para cada livro relevante pego pelo filtro do menu dropdown
+        linha.innerHTML = `
+            <td>${livro.titulo}</td>
+            <td>${livro.autor}</td>
+            <td>${livro.ano}</td>
+            <td>${livro.genero}</td>
+            <td>${livro.disp ? 'Sim' : 'Não'}</td>
+            <td><button onclick="emprestarLivro('${livro.titulo.replace(/'/g, "\\'")}')">Emprestar</button></td>
+        `;
+
+        listaLivros.appendChild(linha);
+    });
+}
+
+
 //renderiza a tabela quando a página é carregada
 document.addEventListener('DOMContentLoaded', () => {
     renderizarTabela()
+    menuDropdown()
 })
 
 //executa a função de pesquisa quando algo é digitado na barra de pesquisa
 document.getElementById('pesquisa').addEventListener('input', pesquisarLivro)
+//executa a função de filtragem quando um gênero é selecionado no menu dropdown
+document.getElementById('generos').addEventListener('change', filtrarPorGenero);

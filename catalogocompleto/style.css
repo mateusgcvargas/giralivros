@@ -1,0 +1,61 @@
+/* Estilo geral */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #98badd;
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    
+}
+/* Cabeçalho */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #98c29d;
+    padding: 10px 20px;
+   
+}
+/* Lado esquerdo (ícone, botões) */
+#ladoesquerdo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align:right;
+}
+#ladoesquerdo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center
+}
+
+/* Centro (título) */
+#centro h1 {
+    font-size: 32px;
+    color: black
+}
+
+/* Lado direito (pesquisa) */
+#ladodireito input {
+    color: black;
+    padding: 8px 15px;
+    border: 2px solid #fff38a;
+    border-radius: 20px;
+    background-color: #fff38a;
+}
+
+/* Estilo do cabeçalho da tabela */
+.tabela-livros thead {
+    background-color: #82c999;
+    border-color: #98c29d;
+    border: 200px;
+
+}
+
+
+
+
+
