@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
@@ -19,20 +19,21 @@
   
   header h1 {
     color: #000;
-    font-size: 28px;
+    font-size: 30px;
     flex: 1;
     text-align: center;
+    font-style: italic;
   }
   
   #perfil {
-    width: 110px;
-    height: 40px;
+    width: 80px;
     object-fit: cover;
   }
   
   #catalogo-btn {
     background-color: #fff176;
-    padding: 5px 15px;
+    padding: 20px 20px;
+    font-size: 20px;
     border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
@@ -49,13 +50,15 @@
     background-color: #f5564e;
     border-radius: 15px;
     padding: 30px 50px;
-    width: 500px;
+    width: 450px;
     text-align: center;
+    margin: auto;
   }
   
   #logo {
-    width: 370px;
+    width: 150px;
     margin-bottom: 10px;
+    margin: auto;
   }
   
   
@@ -98,4 +101,5 @@
     font-weight: bold;
     margin-top: 15px;
     cursor: pointer;
+    font-size: 18px;
   }
