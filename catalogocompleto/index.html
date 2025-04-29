@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo Completo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar">
+        <div id="ladoesquerdo"> 
+            <!-- codigo para ir para tela do usuario.  -->
+            <a href="../paguser/">
+                <img src="img/iconpessoa.png" alt="Usuário" id="iconUsuario"> 
+            </a>
+
+            <!-- diretorio para ter as informações mais rapida com o botão -->
+            <button id="buttongenero" onclick=" ">Gêneros</button>
+            <button id="buttonreg" onclick=" "> Registrar Livro</button>
+        </div>
+        <div id="centro"> 
+            <h1><P>Todos os Livros</P></h1>
+
+        </div>
+        <div id="ladodireito">
+
+            <!-- barra de pesquisa -->
+             <input type="text" id="pesquisa" placeholder="Pesquisar Livro...">
+        </div>    
+    </div>
+    <!-- inicio para ver os catalogos de Tabela de livros  -->
+    <div class="containerLivros">
+
+        <!-- inicio da estrutura de dados da linhas e colunas organizada.  -->
+        <table class="tabela-livros">
+
+            <!-- thead e th era o cabeçalho da tabela,como também alinhar automaticamente os títulos das colunas no centro das células -->
+            <thead>
+                <!-- define uma linha dentro da tabela -->
+                <tr class="cabecalho">
+                    <th>Nome</th>
+                    <th>Autor</th>
+                    <th>Ano</th>
+                    <th>Gênero</th>
+                    <th>Disponíveis</th>
+                </tr>
+            </thead>
+
+            <!-- tbody ,vai definir o corpo da tabela definindo as linhas de dados que vao entrar -->
+            <tbody id="listaLivros">
+                
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

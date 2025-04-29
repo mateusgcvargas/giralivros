@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+    background-color: #90B4D4;
+  }
+  
+  header {
+    background-color: #95BA9E;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header h1 {
+    color: #000;
+    font-size: 28px;
+    flex: 1;
+    text-align: center;
+  }
+  
+  #perfil {
+    width: 110px;
+    height: 40px;
+    object-fit: cover;
+  }
+  
+  #catalogo-btn {
+    background-color: #fff176;
+    padding: 5px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  #form-container {
+    background-color: #f5564e;
+    border-radius: 15px;
+    padding: 30px 50px;
+    width: 500px;
+    text-align: center;
+  }
+  
+  #logo {
+    width: 370px;
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  #campo1-nome,
+  #campo1-ano {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #E6E8D9;
+    outline: none;
+  }
+  
+  #campo2-autor,
+  #campo2-genero {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #95BA9E;
+    outline: none;
+  }
+  
+  #btn-registrar {
+    background-color: #fff176;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+  }
