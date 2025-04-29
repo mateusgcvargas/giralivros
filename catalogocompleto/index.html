@@ -15,15 +15,20 @@
             </a>
 
             <!-- diretorio para ter as informações mais rapida com o botão -->
-            <button id="buttongenero" onclick=" ">Gêneros</button>
-            <button id="buttonreg" onclick=" "> Registrar Livro</button>
+            <div>
+                <!-- select seria um dropdown para filtrar os gêneros -->
+                <select name="Gêneros" id="generos">
+                    <option selected disabled >Gêneros</option>
+                
+                </select>
+            </div>
+            <a href="../livrosdisponiveis/" id="Registrar"> Registrar Livro</a>
         </div>
         <div id="centro"> 
-            <h1><P>Todos os Livros</P></h1>
+            <h1>Todos os Livros</h1>
 
         </div>
         <div id="ladodireito">
-
             <!-- barra de pesquisa -->
              <input type="text" id="pesquisa" placeholder="Pesquisar Livro...">
         </div>    
