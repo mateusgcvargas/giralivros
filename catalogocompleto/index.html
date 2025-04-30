@@ -15,15 +15,23 @@
             </a>
 
             <!-- diretorio para ter as informações mais rapida com o botão -->
-            <button id="buttongenero" onclick=" ">Gêneros</button>
-            <button id="buttonreg" onclick=" "> Registrar Livro</button>
+            <div>
+                <!-- select seria um dropdown para filtrar os gêneros -->
+                <select name="Gêneros" id="generos">
+                    <option selected disabled >Gêneros</option>
+                
+                </select>
+            </div>
+            <button >
+                <a href="../livrosdisponiveis/" id="Registrar"> Registrar Livro</a>
+            </button>
+            
         </div>
         <div id="centro"> 
-            <h1><P>Todos os Livros</P></h1>
+            <h1>Todos os Livros</h1>
 
         </div>
         <div id="ladodireito">
-
             <!-- barra de pesquisa -->
              <input type="text" id="pesquisa" placeholder="Pesquisar Livro...">
         </div>    
@@ -37,12 +45,12 @@
             <!-- thead e th era o cabeçalho da tabela,como também alinhar automaticamente os títulos das colunas no centro das células -->
             <thead>
                 <!-- define uma linha dentro da tabela -->
-                <tr class="cabecalho">
-                    <th>Nome</th>
-                    <th>Autor</th>
-                    <th>Ano</th>
-                    <th>Gênero</th>
-                    <th>Disponíveis</th>
+                <tr >
+                    <th class="cabecalho">Nome</th>
+                    <th class="cabecalho">Autor</th>
+                    <th class="cabecalho">Ano</th>
+                    <th class="cabecalho">Gênero</th>
+                    <th class="cabecalho">Disponíveis</th>
                 </tr>
             </thead>
 

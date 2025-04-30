@@ -1,0 +1,104 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #98badd;
+}
+
+/* NAVBAR */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #98c29d;
+    padding: 10px 20px;
+}
+
+#ladoesquerdo, #ladodireito {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#iconUsuario {
+    width: 70px;
+}
+
+
+#generos {
+    font-size: large;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    
+}
+
+/* Botão Registrar */
+#Registrar {
+    font-size: large;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    
+}
+
+/* Campo de pesquisa */
+#pesquisa {
+    background-color: #fff38a;
+    font-size: 20px;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+/* TÍTULO CENTRAL */
+#centro h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: black;
+}
+
+/* CONTAINER TABELA */
+.containerLivros {
+    background-color: #f24f4f;
+    padding: 30px;
+    margin: 30px auto;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 1100px;
+}
+
+/* TABELA */
+.tabela-livros {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.tabela-livros th {
+    background-color: #82c999;
+    padding: 12px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilo das células de dados */
+.tabela-livros td {
+    background-color: #e3e5c7;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+/* Linhas alternadas verdes */
+.tabela-livros tr:nth-child(even) td {
+    background-color: #82c999;
+}
