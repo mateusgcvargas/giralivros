@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,7 +10,7 @@
     <header>
         <img id="perfil" src="img/iconpessoa.png" alt="Ícone de Perfil">
         <h1>Registro de livros</h1>
-        <a href="#" id="catalogo-btn">Catálogo</a>
+        <a href="../catalogocompleto/index.html" id="catalogo-btn">Catálogo</a>
       </header>
 
   <main>
@@ -17,7 +18,7 @@
       <img src="img/logoinicial.png" alt="Logo GiraLivros" id="logo">
       
 
-      <form>
+      <form id="formreg">
         <label for="nome">Nome</label>
         <input type="text" id="campo1-nome">
 
@@ -30,9 +31,10 @@
         <label for="genero">Gênero</label>
         <input type="text" id="campo2-genero">
 
-        <button type="submit" id="btn-registrar">Registrar</button>
+        <button type="submit" id="btn-registrar" onclick="registrarLivro()">Registrar</button>
       </form>
     </div>
   </main>
 </body>
+<script src="script.js"></script>
 </html>
