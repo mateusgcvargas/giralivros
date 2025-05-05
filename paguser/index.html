@@ -1,12 +1,66 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tela do usuário</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div><h1>placeholder</h1></div>
-    
+    <div id="navbar">
+        <div id="ladoesquerdo"> 
+            <!-- codigo para ir para tela do usuario.  -->
+            <a href="../paguser/">
+                <img src="img/iconpessoa.png" alt="Usuário" id="iconUsuario"> 
+            </a>
+
+            <!-- diretorio para ter as informações mais rapida com o botão -->
+            <div>
+                <!-- select seria um dropdown para filtrar os gêneros -->
+                <select name="Gêneros" id="generos">
+                    <option selected disabled >Gêneros</option>
+                
+                </select>
+            </div>
+            <a href="../registrolivros/index.html" id="Registrar"> 
+                <button>Registrar Livro</button>
+            </a>
+
+            
+        </div>
+        <div id="centro"> 
+            <h1 id="nomeusuario"> </h1>
+
+        </div>
+        <div id="ladodireito">
+            <!-- barra de pesquisa -->
+             <input type="text" id="pesquisa" placeholder="Pesquisar Livro...">
+             <button id="buttonsair"> Sair </button>
+        </div>
+     
+    </div>
+    <!-- inicio da tabela de container  -->
+    <div class="containerLivros">
+        <table class="tabela-livros">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Autor</th>
+              <th>Ano</th>
+              <th>Gênero</th>
+              <th>Prazo</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="listaemprestados">
+            <!-- Livros emprestados aparecem aqui -->
+          </tbody>
+        </table>
+      </div>
+
+
+
+<script src="script.js"></script>
 </body>
 </html>

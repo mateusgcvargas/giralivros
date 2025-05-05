@@ -38,4 +38,11 @@ function exitPage(){
   }
 }
 
+usuarios.push({
+  username: reguser,
+  password: regpsswd,
+  matricula: regmat,
+  emprestimos: [] // novo campo
+})
+
 

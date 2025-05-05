@@ -13,10 +13,10 @@ if (!localStorage.getItem('livros')) {
         {titulo: "O Sol É Pra Todos", autor:"Harper Lee", ano:"1960", genero:"Drama", disp:true },
         {titulo: "Hamlet", autor:"William Shakespeare   ", ano:"1623", genero:"Drama", disp:true },
     ]
-    localStorage.setItem('livros', JSON.stringify(catlivros));
+    localStorage.setItem('livros', JSON.stringify(catlivros))
 }
 //Array de todos os livros
-let livros = JSON.parse(localStorage.getItem('livros')) || [];
+let livros = JSON.parse(localStorage.getItem('livros')) || []
 
 //função de empréstimo de livro
 //quando o título é inserido, seja em upper ou lowercase, ele puxa o titulo
@@ -31,12 +31,37 @@ function emprestarLivro(titulo){
         alert("Livro não está disponível.")
         return
     }
-    else{
+
     livro.disp = false
-    alert(`O livro ${livro.titulo} foi emprestado.`)
     localStorage.setItem('livros', JSON.stringify(livros))
+
+    const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'))
+    const todosUsuarios = JSON.parse(localStorage.getItem('usuarios')) || []
+
+    const usuarioIndex = todosUsuarios.findIndex(user =>
+        user.username === usuarioLogado.username &&
+        user.matricula === usuarioLogado.matricula
+    )
+
+    if (usuarioIndex !== -1) {
+        todosUsuarios[usuarioIndex].emprestimos = todosUsuarios[usuarioIndex].emprestimos || []
+        
+        const jaEmprestado = todosUsuarios[usuarioIndex].emprestimos.some(l => l.titulo === livro.titulo)
+        if (!jaEmprestado) {
+            todosUsuarios[usuarioIndex].emprestimos.push({
+                titulo: livro.titulo,
+                dataEmprestimo: new Date().toLocaleDateString()
+            })
+        }
+
+        localStorage.setItem('usuarios', JSON.stringify(todosUsuarios))
+        localStorage.setItem('usuarioLogado', JSON.stringify(todosUsuarios[usuarioIndex]))
+    }
+
+    alert(`O livro "${livro.titulo}" foi emprestado.`)
     renderizarTabela()
-}}
+}
+
 
 function renderizarTabela() {
     const listaLivros = document.getElementById('listaLivros')
@@ -78,7 +103,7 @@ function pesquisarLivro(){
         livro.titulo.toLowerCase().includes(termoPesquisa) || 
         livro.autor.toLowerCase().includes(termoPesquisa) ||
         livro.genero.toLowerCase().includes(termoPesquisa)
-    );
+    )
     
     // renderiza os livros que contém o filtro relevante
     //cria uma tabela para cada livro disponível que for pego pelo filtro de pesquisa
@@ -94,7 +119,7 @@ function pesquisarLivro(){
             <td><button onclick="emprestarLivro('${livro.titulo.replace(/'/g, "\\'")}')">Emprestar</button></td>
         `
 
-        listaLivros.appendChild(linha);
+        listaLivros.appendChild(linha)
     })
     
 }
@@ -108,22 +133,21 @@ function menuDropdown(){
      const generosUnicos = [...new Set(livros.map(livro => livro.genero))]
 
      generosUnicos.forEach(genero => {
-        const option = document.createElement('option');
-        option.value = genero;
-        option.textContent = genero;
-        generos.appendChild(option);
+        const option = document.createElement('option')
+        option.value = genero
+        option.textContent = genero
+        generos.appendChild(option)
     });
 
 }
 
 //função que renderiza somente o gênero selecionado pelo botão dropdown na tabela
 function filtrarPorGenero() {
-    const generoSelecionado = document.getElementById('generos').value.toLowerCase();
-    const listaLivros = document.getElementById('listaLivros');
-    listaLivros.innerHTML = '';
+    const generoSelecionado = document.getElementById('generos').value.toLowerCase()
+    const listaLivros = document.getElementById('listaLivros')
+    listaLivros.innerHTML = ''
 
-    const livrosFiltrados = livros.filter(livro => livro.genero.toLowerCase() === generoSelecionado);
-
+    const livrosFiltrados = livros.filter(livro => livro.genero.toLowerCase() === generoSelecionado)
     livrosFiltrados.forEach((livro) => {
         const linha = document.createElement('tr');
         //cria uma tabela para cada livro relevante pego pelo filtro do menu dropdown
@@ -134,9 +158,9 @@ function filtrarPorGenero() {
             <td>${livro.genero}</td>
             <td>${livro.disp ? 'Sim' : 'Não'}</td>
             <td><button onclick="emprestarLivro('${livro.titulo.replace(/'/g, "\\'")}')">Emprestar</button></td>
-        `;
+        `
 
-        listaLivros.appendChild(linha);
+        listaLivros.appendChild(linha)
     });
 }
 
