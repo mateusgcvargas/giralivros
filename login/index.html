@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,17 +9,19 @@
 <body>
   <header>
     <nav>
-      <span class="catalogo">Catálogo</span>
+     <a id ="catalogo" href="../catalogocompleto/index.html">
+      catalogo
+     </a>
     </nav>
   </header>
 
   <main>
-    <div class="logo">
+    <div id="logo">
       <img src="img/logoinicial.png" alt="Logo GiraLivros">
-      <h1>GiraLivros</h1>
+      
     </div>
 
-    <div class="login-box">
+    <form id="login-box">
       <h2>Login</h2>
       <img src="img/imagemmenu.png" alt="Árvore de livros" class="tree-img">
 
@@ -30,11 +31,11 @@
       <label for="senha">Senha</label>
       <input type="password" id="senha" placeholder="">
 
-      <button class="login-btn">LOGIN</button>
+      <button type="submit" id="login-btn">LOGIN</button>
 
-      <p class="no-account">Não possui conta?</p>
-      <button class="register-btn">CADASTRAR</button>
-    </div>
+      <p id="no-account">Não possui conta?</p>
+      <button id="register-btn" onclick="pagCad()">CADASTRAR</button>
+    </form>
   </main>
 
   <footer>
@@ -43,4 +44,5 @@
     </p>
   </footer>
 </body>
+<script src="script.js"></script>
 </html>
