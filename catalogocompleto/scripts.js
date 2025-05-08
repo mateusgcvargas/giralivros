@@ -1,6 +1,6 @@
 //se não houver nenhum outro livro salvo no localstorage, ele adiciona um array com todos os livros disponíveis por padrão
 if (!localStorage.getItem('livros')) {
-    //todos os livros atualmente disponíveis por padrão
+//todos os livros atualmente disponíveis por padrão
     const catlivros = [
         {titulo: "Fahrenheit 451", autor:"Ray Bradbury", ano:"1953", genero:"Mistério", disp:true },
         {titulo: "Não Pisque", autor:"Stephen King", ano:"2025", genero:"Mistério", disp:true },
@@ -15,7 +15,7 @@ if (!localStorage.getItem('livros')) {
     ]
     localStorage.setItem('livros', JSON.stringify(catlivros))
 }
-//Array de todos os livros
+//array de todos os livros
 let livros = JSON.parse(localStorage.getItem('livros')) || []
 
 //função de empréstimo de livro

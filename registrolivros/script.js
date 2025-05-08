@@ -1,5 +1,6 @@
 livros = JSON.parse(localStorage.getItem('livros')) || [];
 
+//cria um objeto novo quando uma ação submit é feita no formulário, o livro novo é adicionado no array do catálogo completo
 function registrarLivro(){
     const formreg = document.getElementById('formreg').value
     const formnome = document.getElementById('campo1-nome').value

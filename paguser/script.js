@@ -1,6 +1,8 @@
 const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
 const livros = JSON.parse(localStorage.getItem('livros')) || []
 
+
+//se o usuário não estiver logado, a página não é acessivel
 if (!usuario) {
   alert('Você precisa estar logado para acessar esta página.')
   window.location.href = '../login/index.html'
@@ -9,12 +11,15 @@ if (!usuario) {
   boasVindas.textContent = `Bem-vindo, ${usuario.username}!`
 }
 
+//botão que faz o logout do usuário
 const botaoLogout = document.getElementById('buttonsair')
 botaoLogout.addEventListener('click', () => {
   localStorage.removeItem('usuarioLogado')
   window.location.href = '../login/index.html'
 })
 
+//renderiza uma tabela baseada em cada livro pego emprestado pelo usuário
+//se não tiver nada emprestado, mostra uma mensagem
 const listaEmprestimos = document.getElementById('listaemprestados')
 
 if (usuario.emprestimos && usuario.emprestimos.length > 0) {
@@ -44,11 +49,12 @@ if (usuario.emprestimos && usuario.emprestimos.length > 0) {
     listaEmprestimos.innerHTML = '<tr><td colspan="7">Nenhum livro emprestado.</td></tr>'
   }
   
+  //pede confirmação para devolução do livro
   function devolverLivro(titulo) {
     const confirmacao = confirm(`Deseja realmente devolver o livro "${titulo}"?`)
     if (!confirmacao) return
   
-    // Atualiza a disponibilidade no catálogo de livros
+    // atualiza a disponibilidade no catálogo de livros
     const livros = JSON.parse(localStorage.getItem('livros')) || []
     const livro = livros.find(l => l.titulo === titulo)
     if (livro) {
@@ -56,7 +62,7 @@ if (usuario.emprestimos && usuario.emprestimos.length > 0) {
       localStorage.setItem('livros', JSON.stringify(livros))
     }
   
-    // Remove o livro da lista de empréstimos do usuário
+    // remove o livro da lista de empréstimos do usuário
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
     const usuarioIndex = usuarios.findIndex(u =>
       u.username === usuario.username &&
@@ -72,6 +78,7 @@ if (usuario.emprestimos && usuario.emprestimos.length > 0) {
     }
   }
   
+  //função de pesquisa
   function pesquisarLivro() {
     const termoPesquisa = document.getElementById('pesquisa').value.toLowerCase()
     const listaLivros = document.getElementById('listaemprestados')
@@ -79,7 +86,7 @@ if (usuario.emprestimos && usuario.emprestimos.length > 0) {
   
     const todosLivros = JSON.parse(localStorage.getItem('livros')) || []
   
-    // Filtra os livros emprestados pelo usuário com base no termo de pesquisa
+    // filtra os livros emprestados pelo usuário com base no termo de pesquisa
     const emprestimosFiltrados = usuario.emprestimos.filter(emprestimo => {
       const livro = todosLivros.find(l => l.titulo === emprestimo.titulo)
       if (!livro) return false
