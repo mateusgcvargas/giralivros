@@ -1,124 +1,116 @@
-
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #8db3cc;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0; /* Tirei a margem padrão pra aproveitar 100% da tela */
+    font-family: Arial, sans-serif; /* Escolhi Arial por ser limpa e fácil de ler */
+    background-color: #8db3cc; /* Coloquei um azul claro de fundo pra dar um ar leve */
+    min-height: 100vh; /* Garante que o corpo da página sempre ocupe pelo menos a altura total da tela */
+    display: flex; 
+    flex-direction: column; /* Coloquei os elementos em coluna, de cima pra baixo */
+    align-items: center; /* Alinhei tudo no centro horizontalmente */
 }
 
-
 #navbar {
-    width: 100%;
-    background-color: #a3d9a5;
-    padding: 25px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    width: 100%; /* A barra ocupa toda a largura da página */
+    background-color: #a3d9a5; /* Escolhi um verde claro pra combinar com o resto do visual */
+    padding: 25px; 
+    display: flex; /* Usei flex pra organizar os itens na barra */
+    justify-content: flex-end; /* Posicionei os links no lado direito */
+    align-items: center; /* Alinhei verticalmente os itens no centro */
 }
 
 #navbar .link {
-    font-weight: bold;
-    font-size: 18px;
-    color: black;
-    text-decoration: none;
-    margin-right: 20px;
+    font-weight: bold; /* Deixei os links em negrito pra destacar */
+    font-size: 18px; /* Um tamanho bom pra leitura e visual */
+    color: black; /* Preto pra dar contraste com o fundo claro */
+    text-decoration: none; /* Tirei o sublinhado pra ficar mais limpo */
+    margin-right: 20px; /* Separei os links pra não ficarem colados */
 }
 
-
 #logocadastro {
-    width: 480px;
-    margin-top: 20px;
-    transform: translateY(-130px)
-    
+    width: 480px; /* Tamanho fixo pro logo, pra manter o layout estável */
+    margin-top: 20px; /* Dei um espaçamento do topo */
+    transform: translateY(-130px); /* Subi um pouco o logo pra alinhar melhor visualmente com o formulário */
 }
 
 h2 {
-    margin: 5px 0 20px 0;
-    font-size: 24px;
-    color: #444;
+    margin: 5px 0 20px 0; /* Espaçamento pequeno em cima e maior embaixo pra separar dos elementos seguintes */
+    font-size: 24px; /* Tamanho médio pro título secundário */
+    color: #444; /* Um cinza escuro pra não pesar como o preto */
 }
-
 
 #cadastroform {
     background-color: #f5564e;
-    border-radius: 15px;
-    padding: 20px;
-    width: 350px;
-    margin: 20px auto;
-    text-align: center;
-    transform: translateY(-250px)
+    border-radius: 15px; /* Cantos arredondados pra deixar o visual mais suave */
+    padding: 20px; /* Espaço interno pra não ficar tudo grudado */
+    width: 350px; /* Largura fixa pra manter o design consistente */
+    margin: 20px auto; /* Centralizei horizontalmente */
+    text-align: center; /* Alinhei o conteúdo no centro */
+    transform: translateY(-250px); /* Subi o formulário pra encaixar melhor com o restante da página */
 }
 
 #cadastroform h1 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 32px; /* Título grande pra chamar atenção */
+    font-weight: bold; /* Negrito pra reforçar o destaque */
+    margin-bottom: 10px; /* Espaço embaixo do título */
 }
 
 #arvorecenter {
-    width: 150px;
-    margin: auto;
+    width: 150px; /* Tamanho definido pra imagem da árvore */
+    margin: auto; /* Centralizei a imagem automaticamente */
 }
 
 #cadastroform label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: black;
+    display: block; /* Coloquei cada label em uma linha separada */
+    margin-top: 10px; /* Espaço acima pra não grudar nos inputs */
+    font-weight: bold; /* Negrito pra destacar o nome dos campos */
+    color: black; /* Preto pra boa leitura */
 }
 
 #cadastroform input {
-    width: 90%;
-    padding: 10px;
-    margin-top: 5px;
-    background-color: #fff176;
-    border: none;
-    border-radius: 10px;
-    font-size: 14px;
+    width: 90%; /* Quase toda a largura do formulário, com espaço nas bordas */
+    padding: 10px; /* Espaço interno dentro do input */
+    margin-top: 5px; /* Espaço entre o label e o input */
+    background-color: #fff176; /* Fundo amarelo claro pra destacar os campos de texto */
+    border: none; /* Tirei a borda padrão pra deixar mais limpo */
+    border-radius: 10px; /* Arredondei os cantos pra suavizar o visual */
+    font-size: 14px; /* Tamanho de fonte confortável */
 }
 
-
 #cadastroform button[type="submit"] {
-    margin-top: 20px;
-    width: 90%;
-    padding: 10px;
-    background-color: #a3d9a5;
-    font-weight: bold;
-    font-size: 16px;
+    margin-top: 20px; /* Espaço acima do botão */
+    width: 90%; /* Mesmo alinhamento dos inputs */
+    padding: 10px; /* Botão com altura confortável */
+    background-color: #a3d9a5; 
+    font-weight: bold; /* Destaca o texto do botão */
+    font-size: 16px; /* Tamanho de fonte maior pro botão */
     border: none;
-    border-radius: 10px;
-    cursor: pointer;
+    border-radius: 10px; /* Botão com cantos arredondados */
+    cursor: pointer; /* Mostra a mãozinha pra indicar que é clicável */
 }
 
 #cadastroform + label {
-    margin-top: 10px;
-    font-size: 14px;
-    font-weight: normal;
+    margin-top: 10px; /* Espaço extra acima da label seguinte ao form */
+    font-size: 14px; /* Tamanho menor pra não competir com os títulos */
+    font-weight: normal; /* Texto normal pra diferenciar dos campos principais */
 }
 
-
 #login {
-    width: 90%;
+    width: 90%; /* Igual aos inputs pra manter a consistência */
     padding: 10px;
-    background-color: #a3d9a5;
+    background-color: #a3d9a5; 
     font-weight: bold;
     font-size: 16px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 5px;
+    margin-top: 5px; /* Pequeno espaço acima */
 }
 
-
 footer {
-    text-align: center;
-    font-size: 25px;
+    text-align: center; /* Texto centralizado */
+    font-size: 25px; /* Fonte grande pra fechar bem a página */
     margin-top: 20px;
     padding: 15px;
     font-weight: bold;
     color: black;
-    transform: translateY(-290px)
+    transform: translateY(-290px); /* Subi pra ficar mais próximo do conteúdo principal */
 }
